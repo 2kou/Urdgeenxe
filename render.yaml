@@ -1,0 +1,20 @@
+services:
+  - type: web
+    name: telefoot-bot
+    env: python
+    repo: https://github.com/votre-username/telefoot-bot
+    buildCommand: pip install -r requirements_render.txt
+    startCommand: python render_deploy.py
+    envVars:
+      - key: API_ID
+        value: 29177661
+      - key: API_HASH
+        value: a8639172fa8d35dbfd8ea46286d349ab
+      - key: BOT_TOKEN
+        value: 7573497633:AAHk9K15yTCiJP-zruJrc9v8eK8I9XhjyH4
+      - key: ADMIN_ID
+        value: 1190237801
+      - key: PYTHON_VERSION
+        value: 3.11.0
+    autoDeploy: true
+    plan: free
